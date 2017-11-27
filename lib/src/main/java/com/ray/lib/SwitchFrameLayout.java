@@ -25,6 +25,7 @@ public class SwitchFrameLayout extends FrameLayout {
 
     private LayoutInflater mInflater;
     private SwitchViewHolder mSwitchViewHolder;
+    private Context mContext;
 
     public SwitchFrameLayout(@NonNull Context context) {
         this(context, null);
@@ -36,24 +37,15 @@ public class SwitchFrameLayout extends FrameLayout {
 
     public SwitchFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        mInflater = LayoutInflater.from(context);
         mSwitchViewHolder = new SwitchViewHolder(context);
     }
 
     public void add(int layerId, @LayoutRes int layoutId) {
-        View view = mInflater.inflate(layoutId, this, false);
-        add(layerId, view);
+        mSwitchViewHolder.add(layerId, layoutId, this);
     }
 
     public void add(int layerId, View view) {
-        ViewParent parent = view.getParent();
-        if (parent == null) {
-            addView(view);
-        } else if (parent != this) {
-            throw new IllegalArgumentException("this view has parent");
-        }
-
-        mSwitchViewHolder.add(layerId, view);
+        mSwitchViewHolder.add(layerId, view, this);
     }
 
     public void setCurrentLayerId(int layerId) {

@@ -1,9 +1,11 @@
 package com.ray.lib;
 
 import android.content.Context;
+import android.support.annotation.LayoutRes;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewParent;
 
 import java.util.ArrayList;
@@ -40,7 +42,24 @@ class SwitchViewHolder {
         mViewLists.remove(layerId);
     }
 
-    void add(int layerId, View view) {
+    void add(int layerId, @LayoutRes int layoutId, ViewGroup container) {
+        View view = mInflater.inflate(layoutId, container, false);
+        container.addView(view);
+        add(layerId, view);
+    }
+
+    void add(int layerId, View view, ViewGroup container) {
+        ViewParent parent = view.getParent();
+        if (parent == null) {
+            container.addView(view);
+        } else if (parent != container) {
+            throw new IllegalArgumentException("this view has parent");
+        }
+
+        add(layerId, view);
+    }
+
+    private void add(int layerId, View view) {
         if (containsView(layerId, view)) {
             return;
         }
