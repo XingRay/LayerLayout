@@ -50,12 +50,6 @@ class SwitchViewHolder {
             mViewLists.put(layerId, views);
         }
 
-        ViewParent parent = view.getParent();
-        if (parent != null) {
-            throw new IllegalArgumentException("this view has parent");
-
-        }
-
         views.add(view);
         view.setVisibility((mCurrentLayerId == layerId) ? VISIBLE : GONE);
     }

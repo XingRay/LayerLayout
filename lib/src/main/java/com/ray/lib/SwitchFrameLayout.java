@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.FrameLayout;
 
 
@@ -45,7 +46,13 @@ public class SwitchFrameLayout extends FrameLayout {
     }
 
     public void add(int layerId, View view) {
-        addView(view);
+        ViewParent parent = view.getParent();
+        if (parent == null) {
+            addView(view);
+        } else if (parent != this) {
+            throw new IllegalArgumentException("this view has parent");
+        }
+
         mSwitchViewHolder.add(layerId, view);
     }
 
