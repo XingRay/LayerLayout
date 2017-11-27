@@ -48,11 +48,11 @@ public class StatusSwitchFrameLayout extends SwitchFrameLayout {
         if (childCount == 0) {
             return;
         }
-        if (childCount > 1) {
-            throw new IllegalStateException("can not contains more than 1 child views");
+
+        for (int i = 0; i < childCount; i++) {
+            View childView = getChildAt(i);
+            add(PageStatus.NORMAL, childView);
         }
-        View childView = getChildAt(0);
-        add(PageStatus.NORMAL, childView);
     }
 
     private void initUnnormalLayouts() {
