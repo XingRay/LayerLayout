@@ -5,7 +5,7 @@ android {
     }
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.ray.switch_layout"
+        applicationId "com.ray.layer_layout"
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
