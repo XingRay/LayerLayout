@@ -1,10 +1,10 @@
-package com.ray.switch_layout.widget;
+package com.ray.layer_layout.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.ray.lib.layout.LayerLinearLayout;
-import com.ray.switch_layout.R;
+import com.ray.lib.layout.LayerFrameLayout;
+import com.ray.layer_layout.R;
 
 /**
  * Author      : leixing
@@ -15,16 +15,16 @@ import com.ray.switch_layout.R;
  * Description : xxx
  */
 
-public class StatusLayerLinearLayout extends LayerLinearLayout {
-    public StatusLayerLinearLayout(Context context) {
+public class StatusLayerFrameLayout extends LayerFrameLayout {
+    public StatusLayerFrameLayout(Context context) {
         this(context, null);
     }
 
-    public StatusLayerLinearLayout(Context context, AttributeSet attrs) {
+    public StatusLayerFrameLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public StatusLayerLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public StatusLayerFrameLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         add(1, R.layout.layout_page_layer_1);

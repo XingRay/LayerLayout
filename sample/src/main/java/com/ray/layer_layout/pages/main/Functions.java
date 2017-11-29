@@ -1,8 +1,8 @@
-package com.ray.switch_layout.pages.main;
+package com.ray.layer_layout.pages.main;
 
-import com.ray.switch_layout.pages.single.LayerFrameLayoutActivity;
-import com.ray.switch_layout.pages.single.LayerLinearLayoutActivity;
-import com.ray.switch_layout.pages.single.LayerRelativeLayoutActivity;
+import com.ray.layer_layout.pages.single.LayerFrameLayoutActivity;
+import com.ray.layer_layout.pages.single.LayerLinearLayoutActivity;
+import com.ray.layer_layout.pages.single.LayerRelativeLayoutActivity;
 
 /**
  * Author      : leixing

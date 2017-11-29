@@ -1,4 +1,4 @@
-package com.ray.switch_layout.pages.main;
+package com.ray.layer_layout.pages.main;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.ray.switch_layout.R;
+import com.ray.layer_layout.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,12 +30,12 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.Functi
     private final LayoutInflater mInflater;
     private ItemClickListener<Function> mItemClickListener;
 
-    public FunctionAdapter(Context context) {
+    FunctionAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
         mFunctions = new ArrayList<>();
     }
 
-    public void set(List<Function> functions) {
+    void set(List<Function> functions) {
         mFunctions.clear();
         if (functions != null) {
             mFunctions.addAll(functions);
@@ -63,7 +63,7 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.Functi
         });
     }
 
-    public void setItemClickListener(ItemClickListener<Function> listener) {
+    void setItemClickListener(ItemClickListener<Function> listener) {
         mItemClickListener = listener;
     }
 

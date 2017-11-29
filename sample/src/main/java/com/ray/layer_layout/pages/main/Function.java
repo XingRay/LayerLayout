@@ -1,4 +1,4 @@
-package com.ray.switch_layout.pages.main;
+package com.ray.layer_layout.pages.main;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,7 +12,7 @@ import android.content.Intent;
  * Description : xxx
  */
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class Function {
     private String name;
     private Class<? extends Activity> page;

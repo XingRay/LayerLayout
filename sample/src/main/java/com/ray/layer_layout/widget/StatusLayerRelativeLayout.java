@@ -1,10 +1,10 @@
-package com.ray.switch_layout.widget;
+package com.ray.layer_layout.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
 import com.ray.lib.layout.LayerRelativeLayout;
-import com.ray.switch_layout.R;
+import com.ray.layer_layout.R;
 
 /**
  * Author      : leixing

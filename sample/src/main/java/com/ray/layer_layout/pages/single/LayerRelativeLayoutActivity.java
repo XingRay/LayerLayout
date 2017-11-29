@@ -1,4 +1,4 @@
-package com.ray.switch_layout.pages.single;
+package com.ray.layer_layout.pages.single;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ray.lib.LayerLayout;
-import com.ray.switch_layout.R;
+import com.ray.layer_layout.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

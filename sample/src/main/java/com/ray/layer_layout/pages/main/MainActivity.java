@@ -1,11 +1,11 @@
-package com.ray.switch_layout.pages.main;
+package com.ray.layer_layout.pages.main;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.ray.switch_layout.R;
+import com.ray.layer_layout.R;
 
 import java.util.Arrays;
 

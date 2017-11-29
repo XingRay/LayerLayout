@@ -2,7 +2,7 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.ray.switch_layout">
+    package="com.ray.layer_layout">
 
     <application
         android:allowBackup="true"
@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         android:fullBackupContent="@xml/backup_descriptor">
-        <activity android:name=".pages.main.MainActivity">
+        <activity android:name="com.ray.layer_layout.pages.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -21,9 +21,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".pages.single.LayerFrameLayoutActivity"/>
-        <activity android:name=".pages.single.LayerLinearLayoutActivity"/>
-        <activity android:name=".pages.single.LayerRelativeLayoutActivity"/>
+        <activity android:name="com.ray.layer_layout.pages.single.LayerFrameLayoutActivity"/>
+        <activity android:name="com.ray.layer_layout.pages.single.LayerLinearLayoutActivity"/>
+        <activity android:name="com.ray.layer_layout.pages.single.LayerRelativeLayoutActivity"/>
 
     </application>
 
