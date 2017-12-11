@@ -1,7 +1,6 @@
 package com.ray.lib.layout;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -42,7 +41,7 @@ public class LayerRelativeLayout extends RelativeLayout implements LayerLayout {
         mAutoRegister = true;
     }
 
-    public void add(int layerId, @LayoutRes int layoutId) {
+    public void add(int layerId, int layoutId) {
         View view = ViewHelper.addView(mContext, layoutId, this);
         mViewManager.register(layerId, view);
     }

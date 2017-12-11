@@ -1,7 +1,6 @@
 package com.ray.lib;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -30,7 +29,7 @@ public class LayerLayoutDelegate {
         mAutoRegister = autoRegister;
     }
 
-    public void add(int layerId, @LayoutRes int layoutId) {
+    public void add(int layerId, int layoutId) {
         View view = ViewHelper.addView(mContext, layoutId, mContainer);
         mViewManager.register(layerId, view);
     }

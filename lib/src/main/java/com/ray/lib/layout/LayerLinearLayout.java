@@ -1,7 +1,6 @@
 package com.ray.lib.layout;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -27,11 +26,11 @@ public class LayerLinearLayout extends LinearLayout implements LayerLayout {
         this(context, null);
     }
 
-    public LayerLinearLayout(Context context, @Nullable AttributeSet attrs) {
+    public LayerLinearLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public LayerLinearLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public LayerLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mDelegate = new LayerLayoutDelegate(context, this, new ViewManager(), true);
     }

@@ -1,6 +1,5 @@
 package com.ray.lib;
 
-import android.support.annotation.LayoutRes;
 import android.view.View;
 
 /**
@@ -13,7 +12,7 @@ import android.view.View;
  */
 
 public interface LayerLayout {
-    void add(int layerId, @LayoutRes int layoutId);
+    void add(int layerId, int layoutId);
 
     void add(int layerId, View view);
 
