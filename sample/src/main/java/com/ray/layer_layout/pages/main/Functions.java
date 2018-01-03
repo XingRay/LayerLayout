@@ -14,7 +14,7 @@ import com.ray.layer_layout.pages.single.LayerRelativeLayoutActivity;
  */
 
 class Functions {
-    static final Function[] sFunctions = new Function[]{
+    static final Function[] FUNCTIONS = new Function[]{
             new Function("SwitchFrameLayout", LayerFrameLayoutActivity.class),
             new Function("SwitchLinearLayout", LayerLinearLayoutActivity.class),
             new Function("SwitchRelativeLayout", LayerRelativeLayoutActivity.class)

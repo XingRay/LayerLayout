@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.ray.lib.LayerLayout;
-import com.ray.lib.ViewHelper;
+import com.ray.lib.LayerLayoutDelegate;
 import com.ray.lib.ViewManager;
 
 /**
@@ -22,9 +22,7 @@ public class LayerRelativeLayout extends RelativeLayout implements LayerLayout {
 
     public static final int DEFAULT_LAYER_ID = 0;
 
-    private ViewManager mViewManager;
-    private Context mContext;
-    private boolean mAutoRegister;
+    private LayerLayoutDelegate mDelegate;
 
     public LayerRelativeLayout(Context context) {
         this(context, null);
@@ -36,45 +34,32 @@ public class LayerRelativeLayout extends RelativeLayout implements LayerLayout {
 
     public LayerRelativeLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        mViewManager = new ViewManager();
-        mContext = context;
-        mAutoRegister = true;
+        mDelegate = new LayerLayoutDelegate(context, this, new ViewManager(), true);
     }
 
+    @Override
     public void add(int layerId, int layoutId) {
-        View view = ViewHelper.addView(mContext, layoutId, this);
-        mViewManager.register(layerId, view);
+        mDelegate.add(layerId, layoutId);
     }
 
+    @Override
     public void add(int layerId, View view) {
-        ViewHelper.addView(view, this);
-        mViewManager.register(layerId, view);
+        mDelegate.add(layerId, view);
     }
 
-    public void setCurrentLayerId(int layerId) {
-        mViewManager.setCurrentLayerId(layerId);
+    @Override
+    public void remove(int layerId) {
+        mDelegate.remove(layerId);
+    }
+
+    @Override
+    public void setLayer(int layerId) {
+        mDelegate.setLayer(layerId);
     }
 
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        if (mAutoRegister) {
-            autoRegister();
-        }
-    }
-
-    private void autoRegister() {
-        int childCount = getChildCount();
-        if (childCount == 0) {
-            return;
-        }
-
-        for (int i = 0; i < childCount; i++) {
-            View childView = getChildAt(i);
-            if (mViewManager.isRegistered(childView)) {
-                continue;
-            }
-            mViewManager.register(DEFAULT_LAYER_ID, childView);
-        }
+        mDelegate.onFinishInflate();
     }
 }

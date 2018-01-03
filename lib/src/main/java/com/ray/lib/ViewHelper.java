@@ -15,12 +15,12 @@ import android.view.ViewParent;
  * Description : xxx
  */
 
-public class ViewHelper {
+class ViewHelper {
     private ViewHelper() {
         throw new UnsupportedOperationException();
     }
 
-    public static void addView(View view, ViewGroup container) {
+    static void addView(View view, ViewGroup container) {
         ViewParent parent = view.getParent();
         if (parent == null) {
             container.addView(view);
@@ -29,7 +29,7 @@ public class ViewHelper {
         }
     }
 
-    public static View addView(Context context, int layoutId, ViewGroup container) {
+    static View addView(Context context, int layoutId, ViewGroup container) {
         View view = LayoutInflater.from(context).inflate(layoutId, container, false);
         container.addView(view);
         return view;

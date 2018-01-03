@@ -128,4 +128,8 @@ public class ViewManager {
         }
         return false;
     }
+
+    public List<View> getViews(int layerId) {
+        return mViewLists.get(layerId);
+    }
 }

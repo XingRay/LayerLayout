@@ -36,16 +36,24 @@ public class LayerFrameLayout extends FrameLayout implements LayerLayout {
         mDelegate = new LayerLayoutDelegate(context, this, new ViewManager(), true);
     }
 
+    @Override
     public void add(int layerId, int layoutId) {
         mDelegate.add(layerId, layoutId);
     }
 
+    @Override
     public void add(int layerId, View view) {
         mDelegate.add(layerId, view);
     }
 
-    public void setCurrentLayerId(int layerId) {
-        mDelegate.setCurrentLayerId(layerId);
+    @Override
+    public void remove(int layerId) {
+        mDelegate.remove(layerId);
+    }
+
+    @Override
+    public void setLayer(int layerId) {
+        mDelegate.setLayer(layerId);
     }
 
     @Override

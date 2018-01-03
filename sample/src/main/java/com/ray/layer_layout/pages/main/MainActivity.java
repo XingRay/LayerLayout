@@ -50,6 +50,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadData() {
-        mAdapter.set(Arrays.asList(Functions.sFunctions));
+        mAdapter.set(Arrays.asList(Functions.FUNCTIONS));
     }
 }

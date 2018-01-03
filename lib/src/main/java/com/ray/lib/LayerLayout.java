@@ -16,5 +16,7 @@ public interface LayerLayout {
 
     void add(int layerId, View view);
 
-    void setCurrentLayerId(int layerId);
+    void remove(int layerId);
+    
+    void setLayer(int layerId);
 }

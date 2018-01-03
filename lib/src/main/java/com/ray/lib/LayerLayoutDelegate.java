@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 /**
  * Author      : leixing
  * Date        : 2017-11-28
@@ -14,7 +16,7 @@ import android.view.ViewGroup;
  */
 
 @SuppressWarnings("WeakerAccess")
-public class LayerLayoutDelegate {
+public class LayerLayoutDelegate implements LayerLayout {
     public static final int DEFAULT_LAYER_ID = 0;
 
     private final Context mContext;
@@ -29,17 +31,31 @@ public class LayerLayoutDelegate {
         mAutoRegister = autoRegister;
     }
 
+    @Override
     public void add(int layerId, int layoutId) {
         View view = ViewHelper.addView(mContext, layoutId, mContainer);
         mViewManager.register(layerId, view);
     }
 
+    @Override
     public void add(int layerId, View view) {
         ViewHelper.addView(view, mContainer);
         mViewManager.register(layerId, view);
     }
 
-    public void setCurrentLayerId(int layerId) {
+    @Override
+    public void remove(int layerId) {
+        List<View> views = mViewManager.getViews(layerId);
+        if (views != null) {
+            for (View view : views) {
+                mContainer.removeView(view);
+            }
+        }
+        mViewManager.removeLayer(layerId);
+    }
+
+    @Override
+    public void setLayer(int layerId) {
         mViewManager.setCurrentLayerId(layerId);
     }
 

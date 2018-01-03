@@ -7,8 +7,8 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
-import com.ray.lib.LayerLayout;
 import com.ray.layer_layout.R;
+import com.ray.lib.LayerLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -73,10 +73,12 @@ public class LayerLinearLayoutActivity extends Activity {
             case R.id.bt_4:
                 switchTo(4);
                 break;
+
+            default:
         }
     }
 
     private void switchTo(int layerId) {
-        slllStatus.setCurrentLayerId(layerId);
+        slllStatus.setLayer(layerId);
     }
 }

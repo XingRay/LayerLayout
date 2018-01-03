@@ -46,8 +46,13 @@ public class LayerLinearLayout extends LinearLayout implements LayerLayout {
     }
 
     @Override
-    public void setCurrentLayerId(int layerId) {
-        mDelegate.setCurrentLayerId(layerId);
+    public void remove(int layerId) {
+        mDelegate.remove(layerId);
+    }
+
+    @Override
+    public void setLayer(int layerId) {
+        mDelegate.setLayer(layerId);
     }
 
     @Override
