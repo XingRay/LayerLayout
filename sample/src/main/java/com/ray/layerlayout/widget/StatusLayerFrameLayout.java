@@ -1,15 +1,15 @@
-package com.ray.layer_layout.widget;
+package com.ray.layerlayout.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
 import com.ray.lib.layout.LayerFrameLayout;
-import com.ray.layer_layout.R;
+import com.ray.layerlayout.R;
 
 /**
- * Author      : leixing
- * Date        : 2017-11-27
- * Email       : leixing@hecom.cn
+ * @author      : leixing
+ * @date        : 2017-11-27
+ * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
  * Description : xxx

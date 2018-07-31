@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 
 /**
- * Author      : leixing
- * Date        : 2017-11-28
- * Email       : leixing@hecom.cn
+ * @author      : leixing
+ * @date        : 2017-11-28
+ * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
  * Description : xxx

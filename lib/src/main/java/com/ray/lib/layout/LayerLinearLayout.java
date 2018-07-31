@@ -10,12 +10,12 @@ import com.ray.lib.LayerLayoutDelegate;
 import com.ray.lib.ViewManager;
 
 /**
- * Author      : leixing
- * Date        : 2017-11-27
- * Email       : leixing@hecom.cn
+ * @author      : leixing
+ * @date        : 2017-11-27
+ * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
- * Description : xxx
+ * Description : 分层线性布局
  */
 
 public class LayerLinearLayout extends LinearLayout implements LayerLayout {

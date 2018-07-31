@@ -1,13 +1,13 @@
-package com.ray.layer_layout.pages.main;
+package com.ray.layerlayout.pages.main;
 
-import com.ray.layer_layout.pages.single.LayerFrameLayoutActivity;
-import com.ray.layer_layout.pages.single.LayerLinearLayoutActivity;
-import com.ray.layer_layout.pages.single.LayerRelativeLayoutActivity;
+import com.ray.layerlayout.pages.single.LayerFrameLayoutActivity;
+import com.ray.layerlayout.pages.single.LayerLinearLayoutActivity;
+import com.ray.layerlayout.pages.single.LayerRelativeLayoutActivity;
 
 /**
- * Author      : leixing
- * Date        : 2017-11-27
- * Email       : leixing@hecom.cn
+ * @author      : leixing
+ * @date        : 2017-11-27
+ * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
  * Description : xxx

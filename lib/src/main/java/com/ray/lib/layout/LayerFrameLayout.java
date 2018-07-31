@@ -11,12 +11,12 @@ import com.ray.lib.ViewManager;
 
 
 /**
- * Author      : leixing
- * Date        : 2017-07-09
- * Email       : leixing@hecom.cn
+ * @author      : leixing
+ * @date        : 2017-07-09
+ * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
- * Description : xxx
+ * Description : 分层帧布局
  */
 
 public class LayerFrameLayout extends FrameLayout implements LayerLayout {

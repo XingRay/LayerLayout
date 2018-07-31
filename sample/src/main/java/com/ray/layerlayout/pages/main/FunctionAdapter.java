@@ -1,4 +1,4 @@
-package com.ray.layer_layout.pages.main;
+package com.ray.layerlayout.pages.main;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.ray.layer_layout.R;
+import com.ray.layerlayout.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,9 +16,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Author      : leixing
- * Date        : 2017-11-27
- * Email       : leixing@hecom.cn
+ * @author      : leixing
+ * @date        : 2017-11-27
+ * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
  * Description : xxx

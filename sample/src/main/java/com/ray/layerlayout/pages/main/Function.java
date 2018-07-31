@@ -1,11 +1,11 @@
-package com.ray.layer_layout.pages.main;
+package com.ray.layerlayout.pages.main;
 
 import android.app.Activity;
 import android.content.Intent;
 
 /**
- * Author      : leixing
- * Date        : 2017-04-14
+ * @author      : leixing
+ * @date        : 2017-04-14
  * Email       : leixing1012@gmail.cn
  * Version     : 0.0.1
  * <p>

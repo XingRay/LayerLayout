@@ -52,7 +52,7 @@
             android:text="layer4"/>
     </LinearLayout>
 
-    <com.ray.layer_layout.widget.StatusLayerRelativeLayout
+    <com.ray.layerlayout.widget.StatusLayerRelativeLayout
         android:id="@+id/slrl_status"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -63,5 +63,5 @@
             android:layout_gravity="center"
             android:contentDescription="image"
             android:text="layer 0"/>
-    </com.ray.layer_layout.widget.StatusLayerRelativeLayout>
+    </com.ray.layerlayout.widget.StatusLayerRelativeLayout>
 </LinearLayout>

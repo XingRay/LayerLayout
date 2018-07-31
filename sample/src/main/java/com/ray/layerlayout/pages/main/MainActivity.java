@@ -1,17 +1,22 @@
-package com.ray.layer_layout.pages.main;
+package com.ray.layerlayout.pages.main;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.ray.layer_layout.R;
+import com.ray.layerlayout.R;
 
 import java.util.Arrays;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * 主界面
+ *
+ * @author leixing
+ */
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.rv_list)

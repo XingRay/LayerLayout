@@ -10,9 +10,9 @@ import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
 /**
- * Author      : leixing
- * Date        : 2017-11-27
- * Email       : leixing@hecom.cn
+ * @author : leixing
+ * @date : 2017-11-27
+ * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
  * Description : xxx
@@ -75,6 +75,7 @@ public class ViewManager {
         return false;
     }
 
+    @SuppressWarnings("unused")
     public boolean unregister(View view) {
         for (int i = 0, size = mViewLists.size(); i < size; i++) {
             int key = mViewLists.keyAt(i);

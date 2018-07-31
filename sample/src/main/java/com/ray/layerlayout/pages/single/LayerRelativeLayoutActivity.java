@@ -1,4 +1,4 @@
-package com.ray.layer_layout.pages.single;
+package com.ray.layerlayout.pages.single;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
-import com.ray.layer_layout.R;
+import com.ray.layerlayout.R;
 import com.ray.lib.LayerLayout;
 
 import butterknife.BindView;
@@ -15,9 +15,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Author      : leixing
- * Date        : 2017-11-27
- * Email       : leixing@hecom.cn
+ * @author      : leixing
+ * @date        : 2017-11-27
+ * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
  * Description : xxx
