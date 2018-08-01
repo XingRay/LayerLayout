@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +16,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="10dp"
-            android:text="layer0"/>
+            android:text="layer0" />
 
         <Button
             android:id="@+id/bt_1"
@@ -25,7 +24,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="10dp"
-            android:text="layer1"/>
+            android:text="layer1" />
 
         <Button
             android:id="@+id/bt_2"
@@ -33,7 +32,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="10dp"
-            android:text="layer2"/>
+            android:text="layer2" />
 
         <Button
             android:id="@+id/bt_3"
@@ -41,7 +40,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="10dp"
-            android:text="layer3"/>
+            android:text="layer3" />
 
         <Button
             android:id="@+id/bt_4"
@@ -49,11 +48,11 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="10dp"
-            android:text="layer4"/>
+            android:text="layer4" />
     </LinearLayout>
 
-    <com.ray.layerlayout.widget.StatusLayerFrameLayout
-        android:id="@+id/slfl_status"
+    <com.ray.lib.layout.LayerFrameLayout
+        android:id="@+id/ll_layer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -61,7 +60,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:contentDescription="image"
-            android:text="layer 0"/>
-    </com.ray.layerlayout.widget.StatusLayerFrameLayout>
+            android:text="layer 0" />
+    </com.ray.lib.layout.LayerFrameLayout>
 </LinearLayout>

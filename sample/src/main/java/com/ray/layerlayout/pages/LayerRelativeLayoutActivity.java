@@ -1,4 +1,4 @@
-package com.ray.layerlayout.pages.single;
+package com.ray.layerlayout.pages;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -15,8 +15,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * @author      : leixing
- * @date        : 2017-11-27
+ * @author : leixing
+ * @date : 2017-11-27
  * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
@@ -24,8 +24,8 @@ import butterknife.OnClick;
  */
 
 public class LayerRelativeLayoutActivity extends Activity {
-    @BindView(R.id.slrl_status)
-    LayerLayout slrlStatus;
+    @BindView(R.id.ll_layer)
+    LayerLayout llLayer;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,10 +44,12 @@ public class LayerRelativeLayoutActivity extends Activity {
         setContentView(R.layout.activity_switch_relative_layout);
         ButterKnife.bind(this);
 
-        slrlStatus.add(3, R.layout.layout_page_layer_3);
+        llLayer.add(1, R.layout.layer_relative_1);
+        llLayer.add(2, R.layout.layer_relative_2);
+        llLayer.add(3, R.layout.layout_page_layer_3);
         TextView textView = new TextView(this);
         textView.setText("layer 4");
-        slrlStatus.add(4, textView);
+        llLayer.add(4, textView);
     }
 
     private void loadData() {
@@ -79,6 +81,6 @@ public class LayerRelativeLayoutActivity extends Activity {
     }
 
     private void switchTo(int layerId) {
-        slrlStatus.setLayer(layerId);
+        llLayer.setLayer(layerId);
     }
 }

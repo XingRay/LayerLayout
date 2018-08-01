@@ -8,10 +8,15 @@ import android.view.View;
  * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
- * Description : xxx
+ * Description : 层次布局，用于界面层次切换
  */
 
 public interface LayerLayout {
+
+    /**
+     * 默认层次ID
+     */
+    int DEFAULT_LAYER_ID = 0;
 
     /**
      * 添加层次布局

@@ -6,9 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * @author      : leixing
- * @date        : 2017-11-28
+ * @author : leixing
+ * @date : 2017-11-28
  * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
@@ -20,7 +23,7 @@ class ViewHelper {
         throw new UnsupportedOperationException();
     }
 
-    static void addView(View view, ViewGroup container) {
+    static void inflate(View view, ViewGroup container) {
         ViewParent parent = view.getParent();
         if (parent == null) {
             container.addView(view);
@@ -29,9 +32,19 @@ class ViewHelper {
         }
     }
 
-    static View addView(Context context, int layoutId, ViewGroup container) {
-        View view = LayoutInflater.from(context).inflate(layoutId, container, false);
-        container.addView(view);
-        return view;
+    static List<View> inflate(Context context, int layoutId, ViewGroup container) {
+        List<View> before = getChildren(container);
+        LayoutInflater.from(context).inflate(layoutId, container, true);
+        List<View> after = getChildren(container);
+        after.removeAll(before);
+        return after;
+    }
+
+    private static List<View> getChildren(ViewGroup container) {
+        List<View> views = new ArrayList<>();
+        for (int i = 0, size = container.getChildCount(); i < size; i++) {
+            views.add(container.getChildAt(i));
+        }
+        return views;
     }
 }

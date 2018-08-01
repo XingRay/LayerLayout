@@ -36,10 +36,27 @@ public class ViewManager {
         mViewLists.remove(layerId);
     }
 
-    public void register(int layerId, View view) {
-        if (unregisterIfInOtherLayer(layerId, view)) {
+    public void register(int layerId, List<View> viewList) {
+        if (viewList == null) {
             return;
         }
+
+        List<View> views = mViewLists.get(layerId);
+        if (views == null) {
+            views = new ArrayList<>();
+            mViewLists.put(layerId, views);
+        }
+        views.addAll(viewList);
+        for (View view : viewList) {
+            view.setVisibility((mCurrentLayerId == layerId) ? VISIBLE : GONE);
+        }
+    }
+
+    public void register(int layerId, View view) {
+        if (view == null) {
+            return;
+        }
+
         List<View> views = mViewLists.get(layerId);
         if (views == null) {
             views = new ArrayList<>();
@@ -48,31 +65,6 @@ public class ViewManager {
 
         views.add(view);
         view.setVisibility((mCurrentLayerId == layerId) ? VISIBLE : GONE);
-    }
-
-    /**
-     * @param layerId layerId
-     * @param view    view
-     * @return whether {@code view} if already in layer
-     */
-    public boolean unregisterIfInOtherLayer(int layerId, View view) {
-        for (int i = 0, size = mViewLists.size(); i < size; i++) {
-            int key = mViewLists.keyAt(i);
-            List<View> views = mViewLists.get(key);
-            if (views == null) {
-                continue;
-            }
-            if (views.contains(view)) {
-                if (key == layerId) {
-                    return true;
-                }
-
-                views.remove(view);
-                return false;
-            }
-        }
-
-        return false;
     }
 
     @SuppressWarnings("unused")
@@ -96,9 +88,20 @@ public class ViewManager {
         if (mCurrentLayerId == layerId) {
             return;
         }
+        updateVisibility(mCurrentLayerId, GONE);
         mCurrentLayerId = layerId;
+        updateVisibility(mCurrentLayerId, VISIBLE);
+    }
 
-        update();
+    private void updateVisibility(int layerId, int visibility) {
+        List<View> views = mViewLists.get(layerId);
+        if (views == null) {
+            return;
+        }
+
+        for (View view : views) {
+            view.setVisibility(visibility);
+        }
     }
 
     public void update() {

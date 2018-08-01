@@ -21,9 +21,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.ray.layerlayout.pages.single.LayerFrameLayoutActivity"/>
-        <activity android:name="com.ray.layerlayout.pages.single.LayerLinearLayoutActivity"/>
-        <activity android:name="com.ray.layerlayout.pages.single.LayerRelativeLayoutActivity"/>
+        <activity android:name="com.ray.layerlayout.pages.LayerFrameLayoutActivity"/>
+        <activity android:name="com.ray.layerlayout.pages.LayerLinearLayoutActivity"/>
+        <activity android:name="com.ray.layerlayout.pages.LayerRelativeLayoutActivity"/>
 
     </application>
 

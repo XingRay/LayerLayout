@@ -1,4 +1,4 @@
-package com.ray.layerlayout.pages.single;
+package com.ray.layerlayout.pages;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -15,17 +15,17 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * @author      : leixing
- * @date        : 2017-11-27
+ * @author : leixing
+ * @date : 2017-11-27
  * Email       : leixing1012@qq.com
  * Version     : 0.0.1
  * <p>
  * Description : xxx
  */
 
-public class LayerLinearLayoutActivity extends Activity {
-    @BindView(R.id.slll_status)
-    LayerLayout slllStatus;
+public class LayerFrameLayoutActivity extends Activity {
+    @BindView(R.id.ll_layer)
+    LayerLayout llLayer;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,13 +41,16 @@ public class LayerLinearLayoutActivity extends Activity {
 
     @SuppressLint("SetTextI18n")
     private void initView() {
-        setContentView(R.layout.activity_switch_linear_layout);
+        setContentView(R.layout.activity_switch_frame_layout);
         ButterKnife.bind(this);
 
-        slllStatus.add(3, R.layout.layout_page_layer_3);
+        llLayer.add(1, R.layout.layer_frame_1);
+        llLayer.add(2, R.layout.layer_frame_2);
+        llLayer.add(3, R.layout.layout_page_layer_3);
+
         TextView textView = new TextView(this);
         textView.setText("layer 4");
-        slllStatus.add(4, textView);
+        llLayer.add(4, textView);
     }
 
     private void loadData() {
@@ -60,12 +63,15 @@ public class LayerLinearLayoutActivity extends Activity {
             case R.id.bt_0:
                 switchTo(0);
                 break;
+
             case R.id.bt_1:
                 switchTo(1);
                 break;
+
             case R.id.bt_2:
                 switchTo(2);
                 break;
+
             case R.id.bt_3:
                 switchTo(3);
                 break;
@@ -79,6 +85,6 @@ public class LayerLinearLayoutActivity extends Activity {
     }
 
     private void switchTo(int layerId) {
-        slllStatus.setLayer(layerId);
+        llLayer.setLayer(layerId);
     }
 }

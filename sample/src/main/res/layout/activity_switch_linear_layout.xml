@@ -52,8 +52,8 @@
             android:text="layer4"/>
     </LinearLayout>
 
-    <com.ray.layerlayout.widget.StatusLayerLinearLayout
-        android:id="@+id/slll_status"
+    <com.ray.lib.layout.LayerLinearLayout
+        android:id="@+id/ll_layer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -63,5 +63,5 @@
             android:layout_gravity="center"
             android:contentDescription="image"
             android:text="layer 0"/>
-    </com.ray.layerlayout.widget.StatusLayerLinearLayout>
+    </com.ray.lib.layout.LayerLinearLayout>
 </LinearLayout>

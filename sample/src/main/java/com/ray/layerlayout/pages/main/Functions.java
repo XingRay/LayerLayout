@@ -1,8 +1,8 @@
 package com.ray.layerlayout.pages.main;
 
-import com.ray.layerlayout.pages.single.LayerFrameLayoutActivity;
-import com.ray.layerlayout.pages.single.LayerLinearLayoutActivity;
-import com.ray.layerlayout.pages.single.LayerRelativeLayoutActivity;
+import com.ray.layerlayout.pages.LayerFrameLayoutActivity;
+import com.ray.layerlayout.pages.LayerLinearLayoutActivity;
+import com.ray.layerlayout.pages.LayerRelativeLayoutActivity;
 
 /**
  * @author      : leixing

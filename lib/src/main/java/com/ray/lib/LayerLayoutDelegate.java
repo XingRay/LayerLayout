@@ -17,8 +17,6 @@ import java.util.List;
 
 @SuppressWarnings("WeakerAccess")
 public class LayerLayoutDelegate implements LayerLayout {
-    public static final int DEFAULT_LAYER_ID = 0;
-
     private final Context mContext;
     private final ViewGroup mContainer;
     private final ViewManager mViewManager;
@@ -33,13 +31,13 @@ public class LayerLayoutDelegate implements LayerLayout {
 
     @Override
     public void add(int layerId, int layoutId) {
-        View view = ViewHelper.addView(mContext, layoutId, mContainer);
-        mViewManager.register(layerId, view);
+        List<View> views = ViewHelper.inflate(mContext, layoutId, mContainer);
+        mViewManager.register(layerId, views);
     }
 
     @Override
     public void add(int layerId, View view) {
-        ViewHelper.addView(view, mContainer);
+        ViewHelper.inflate(view, mContainer);
         mViewManager.register(layerId, view);
     }
 
@@ -60,9 +58,11 @@ public class LayerLayoutDelegate implements LayerLayout {
     }
 
     public void onFinishInflate() {
-        if (mAutoRegister) {
-            autoRegister();
+        if (!mAutoRegister) {
+            return;
         }
+
+        autoRegister();
     }
 
     private void autoRegister() {
